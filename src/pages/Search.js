@@ -8,7 +8,7 @@ const Search = () => {
     <View style={styles.container}>
       <View>
         <SearchBox />
-        {/* <SearchContent /> */}
+        <SearchContent />
       </View>
     </View>
   );

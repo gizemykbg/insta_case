@@ -14,26 +14,16 @@ const SearchImage = ({item}) => {
   );
 
   return (
-    // <View >
-    <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      style={styles.container}>
-      {item.map((img, index) => (
-        <View key={index} style={styles.inner_container}>
-          <Image source={{uri: img.images}} style={styles.image} />
-        </View>
-      ))}
-    </ScrollView>
-    //   <FlatList
-    //  data={item}
-    //  keyExtractor={(_, index) => index.toString()}
-    // horizontal
-    // showsHorizontalScrollIndicator={false}
-    // pagingEnabled
-    // renderItem={renderItem}
-    // />
-    // </View>
+    <View style={styles.container}>
+      <FlatList
+        data={item}
+        keyExtractor={(_, index) => index.toString()}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        pagingEnabled
+        renderItem={renderItem}
+      />
+    </View>
   );
 };
 
@@ -43,6 +33,7 @@ export const styles = StyleSheet.create({
   image: {
     width: Dimensions.get('window').width / 2,
     height: Dimensions.get('window').height / 2,
+    borderRadius: 30,
   },
   container: {
     width: Dimensions.get('window').width / 2,

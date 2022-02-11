@@ -1,28 +1,16 @@
-import {FlatList, Text, Video} from 'react-native';
-import React, {useRef} from 'react';
+import {FlatList} from 'react-native';
+import React from 'react';
+import Video from 'react-native-video';
 import imgUrl from '../../utills/imgUrl.json';
 import SearchImage, {styles} from './SearchImage';
 
 const SearchContent = () => {
-  const onBuffer = buffer => {
-    console.log('buffring', buffer);
-  };
-  const onError = error => {
-    console.log('error', error);
-  };
-  const renderItem = ({item}) => {
-    return item.id === 1 ? (
+  const renderItem = ({item}) =>
+    item.id === 1 ? (
       <SearchImage item={item} />
     ) : (
-      <Video
-        source={{uri: item.url}}
-        resizeMode="cover"
-        style={styles.image}
-        onBuffer={onBuffer}
-        onError={onError}
-      />
+      <Video source={{uri: item.url}} resizeMode="cover" style={styles.image} />
     );
-  };
 
   return (
     <FlatList

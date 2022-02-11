@@ -1,6 +1,7 @@
 apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
+
 project.ext.vectoricons = [
     iconFontNames: [ "MaterialCommunityIcons.ttf" ] 
 ]
@@ -136,6 +137,11 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+      compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    } 
+
     defaultConfig {
         applicationId "com.insta_case"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -201,7 +207,7 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
-    implementation "androidx.appcompat:appcompat:1.0.0"
+   
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
     }

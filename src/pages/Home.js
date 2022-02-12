@@ -7,10 +7,6 @@ import Stories from '../components/Header/Stories';
 import Divider from '../components/Divider';
 
 const Home = () => {
-  const renderItem = ({item}) => {
-    return <PostCard item={item} />;
-  };
-
   return (
     <>
       <Header />

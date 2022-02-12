@@ -5,24 +5,40 @@ import {
   Image,
   Dimensions,
   ScrollView,
+  Text,
 } from 'react-native';
 import React from 'react';
 
 const SearchImage = ({item}) => {
-  const renderItem = ({data}) => (
-    <Image source={{uri: data.url}} resizeMode="cover" style={styles.image} />
-  );
-
+  const renderItem = ({data}) => {
+    console.log(data, 'dattad');
+  };
+  console.log(item, 'item');
+  console.log(item.url);
   return (
     <View style={styles.container}>
-      <FlatList
-        data={item}
-        keyExtractor={(_, index) => index.toString()}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        pagingEnabled
-        renderItem={renderItem}
-      />
+      {item.id === 1 ? (
+        <FlatList
+          data={item.url}
+          keyExtractor={img => img.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          renderItem={data => {
+            console.log(data, 'data');
+            return (
+              <Image
+                source={{
+                  uri: data.item,
+                }}
+                resizeMode="cover"
+                style={styles.image}
+              />
+            );
+          }}
+        />
+      ) : (
+        <Text>Error</Text>
+      )}
     </View>
   );
 };
@@ -40,6 +56,5 @@ export const styles = StyleSheet.create({
     height: Dimensions.get('window').height / 2,
     borderRadius: 30,
     margin: 3,
-    backgroundColor: 'red',
   },
 });

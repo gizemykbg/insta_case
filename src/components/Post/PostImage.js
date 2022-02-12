@@ -3,19 +3,23 @@ import React from 'react';
 import VideoContainer from './VideoContainer';
 
 const PostImage = ({item}) => {
-  const renderItem = ({data}) => (
-    <Image source={{uri: data}} style={styles.image} resizeMode="cover" />
-  );
-
-  return (
+  return item.image ? (
     <FlatList
       data={item.image}
-      renderItem={renderItem}
+      renderItem={data => (
+        <Image
+          source={{uri: data.item}}
+          style={styles.image}
+          resizeMode="cover"
+        />
+      )}
       keyExtractor={post => post.id}
       showsVerticalScrollIndicator={false}
       horizontal
       style={styles.image}
     />
+  ) : (
+    <VideoContainer data={item.video} />
   );
 };
 
@@ -32,13 +36,6 @@ export const styles = StyleSheet.create({
   },
 });
 
-// const renderItem = ({data}) =>
-// item.image ? (
-//   <Image
-//     source={{uri: data.images}}
-//     style={styles.image}
-//     resizeMode="cover"
-//   />
-// ) : (
-//   <VideoContainer data={item.video} />
+// const renderItem = ({data}) => (
+//   <Image source={{uri: data}} style={styles.image} resizeMode="cover" />
 // );

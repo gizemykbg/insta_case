@@ -5,12 +5,14 @@ import imgUrl from '../../utills/imgUrl.json';
 import SearchImage, {styles} from './SearchImage';
 
 const SearchContent = () => {
-  const renderItem = ({item}) =>
-    item.id === 1 ? (
+  const renderItem = ({item}) => {
+    // console.log(item);
+    return item.id === 1 ? (
       <SearchImage item={item} />
     ) : (
       <Video source={{uri: item.url}} resizeMode="cover" style={styles.image} />
     );
+  };
 
   return (
     <FlatList

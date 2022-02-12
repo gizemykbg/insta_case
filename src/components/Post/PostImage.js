@@ -27,7 +27,7 @@ export default PostImage;
 
 const witdh = Dimensions.get('window').width;
 const ratio = 1080 / witdh;
-const height = 607 / ratio;
+const height = 960 / ratio;
 
 export const styles = StyleSheet.create({
   image: {
@@ -35,7 +35,3 @@ export const styles = StyleSheet.create({
     height: height,
   },
 });
-
-// const renderItem = ({data}) => (
-//   <Image source={{uri: data}} style={styles.image} resizeMode="cover" />
-// );

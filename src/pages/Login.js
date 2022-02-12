@@ -1,5 +1,5 @@
 import {View, Alert} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import LoginForm from '../components/LoginForm';
 import {useNavigation} from '@react-navigation/native';
 
@@ -11,11 +11,10 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   console.log(username, password);
-  const setData = async () => {
+  const saveValue = async () => {
     if (username && password) {
       try {
-        await AsyncStorage.setItem('Username', password);
-        navigation.navigate('Home');
+        await AsyncStorage.setItem('Username', username);
       } catch (error) {
         console.log(error);
       }
@@ -24,11 +23,12 @@ const Login = () => {
     }
   };
 
-  console.log(AsyncStorage.setItem(username));
+  console.log(AsyncStorage.setItem(username), 'lala');
   const handleLogin = () => {
     setUsername(username);
     setPassword(password);
-    setData();
+    saveValue();
+    navigation.navigate('Home');
   };
 
   return (

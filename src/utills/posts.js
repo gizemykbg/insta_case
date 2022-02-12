@@ -1,7 +1,7 @@
 export const Posts = [
   {
     id: 1,
-    description: 'nature fdgjhgfkj',
+    description: 'nature',
     image: [
       'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       'https://images.pexels.com/photos/2880507/pexels-photo-2880507.jpeg?auto=compress&cs=tinysrgb&h=350',
@@ -15,24 +15,24 @@ export const Posts = [
   },
   {
     id: 2,
-    description: 'dfjklhdslknla ',
+    description: 'pink ',
     image: [
-      'https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg?auto=compress&cs=tinysrgb&h=350',
-      'https://images.pexels.com/photos/3573351/pexels-photo-3573351.png?auto=compress&cs=tinysrgb&h=350',
+      'https://images.pexels.com/photos/10365585/pexels-photo-10365585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+      'https://images.pexels.com/photos/6807453/pexels-photo-6807453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     ],
     likes: 101,
     user: {
       name: 'gizos',
       avatar:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Ftr%2Fpng-ckofp&psig=AOvVaw1Gtyc0vaNzbIu1GUqS2So4&ust=1644511768091000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIi_gfKJ8_UCFQAAAAAdAAAAABAt',
+        'https://hekimoglu-baklavalari.de/wp-content/uploads/2020/08/11_avatar-512.png',
     },
   },
   {
     id: 3,
-    description: 'dfgfjhkjdsofıjsgjdjgjflhl',
+    description: 'red',
     image: [
-      'https://images.pexels.com/photos/2061057/pexels-photo-2061057.jpeg?auto=compress&cs=tinysrgb&h=350',
-      'https://www.pexels.com/photo/photo-of-buildings-2825951/',
+      'https://images.pexels.com/photos/4388293/pexels-photo-4388293.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+      'https://images.pexels.com/photos/2061057/pexels-photo-2061057.jpeg',
     ],
     likes: 101,
     user: {
@@ -42,9 +42,9 @@ export const Posts = [
   },
   {
     id: 4,
-    description: 'dfgfjhkjdsofıjsgjdjgjflhl',
+    description: 'bread',
     video:
-      'https://player.vimeo.com/external/342571552.sd.mp4?s=e0df43853c25598dfd0ec4d3f413bce1e002deef&profile_id=139&oauth2_token_id=57447761',
+      'https://player.vimeo.com/external/551770838.sd.mp4?s=1351165ed743a52827fb5d156d6375180ee5d049&profile_id=165&oauth2_token_id=57447761',
     likes: 101,
     user: {
       name: 'gizos',
@@ -53,14 +53,14 @@ export const Posts = [
   },
   {
     id: 5,
-    description: 'dfgfjhkjdsofıjsgjdjgjflhl',
+    description: 'smile',
     video:
-      'https://player.vimeo.com/external/342571552.hd.mp4?s=6aa6f164de3812abadff3dde86d19f7a074a8a66&profile_id=175&oauth2_token_id=57447761',
+      'https://player.vimeo.com/external/530176526.sd.mp4?s=51f75b48dc4520a121fda7a49f78e4f5fb10674e&profile_id=165&oauth2_token_id=57447761',
     likes: 101,
     user: {
       name: 'fato',
       avatar:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Ftr%2Fpng-ckofp&psig=AOvVaw1Gtyc0vaNzbIu1GUqS2So4&ust=1644511768091000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIi_gfKJ8_UCFQAAAAAdAAAAABAt',
+        'https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png',
     },
   },
 ];

@@ -2,10 +2,10 @@ import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import StackNavigation from './StackNavigation';
 import TabNavigation from './TabNavigation';
 
 import {useState} from 'react';
+import Login from '../pages/Login';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +16,7 @@ const Routes = () => {
     try {
       await AsyncStorage.getItem('Username').then(value => {
         if (value !== null) {
+          console.log(value);
           setIsLogin(true);
         } else {
           setIsLogin(false);
@@ -28,19 +29,23 @@ const Routes = () => {
   useEffect(() => {
     getData();
   }, [isLogin]);
-  console.log(AsyncStorage.getItem('Username'));
+
   console.log(isLogin);
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Main" headerMode="none">
+      <Stack.Navigator>
         {isLogin === true ? (
           <Stack.Screen
-            name="Tabs"
+            name="Home"
             component={TabNavigation}
             options={{headerShown: false}}
           />
         ) : (
-          <Stack.Screen name="loginStack" component={StackNavigation} />
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{headerShown: false}}
+          />
         )}
       </Stack.Navigator>
     </NavigationContainer>

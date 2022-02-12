@@ -12,7 +12,7 @@ export default function TabNavigation() {
   return (
     <Tab.Navigator style={styles.tabbar}>
       <Tab.Screen
-        name="Home"
+        name="HomePage"
         component={Home}
         options={{
           headerShown: false,

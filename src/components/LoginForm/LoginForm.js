@@ -16,7 +16,10 @@ const LoginForm = ({
           style={styles.img}
           source={{uri: '../../assets/images-884730.png'}}
         />
-        <Image source={{uri: '../../assets/IG logo.svg'}} style={styles.logo} />
+        <Image
+          source={{uri: '../../assets/nstagram.png'}}
+          style={styles.logo}
+        />
       </View>
       <View style={styles.input}>
         <TextInput

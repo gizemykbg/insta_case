@@ -31,6 +31,7 @@ export const styles = StyleSheet.create({
   },
   inner_container: {
     paddingHorizontal: 12,
+    paddingTop: 5,
   },
   actions: {
     flexDirection: 'row',
@@ -47,6 +48,7 @@ export const styles = StyleSheet.create({
   },
   user_text: {
     fontWeight: 'bold',
+    paddingTop: 5,
   },
   flatlist: {
     width: witdh,

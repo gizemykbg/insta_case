@@ -13,7 +13,7 @@ export default VideoContainer;
 
 const witdh = Dimensions.get('window').width;
 const ratio = 1080 / witdh;
-const height = 607 / ratio;
+const height = 960 / ratio;
 
 const styles = StyleSheet.create({
   video: {

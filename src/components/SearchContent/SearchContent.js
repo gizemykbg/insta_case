@@ -6,7 +6,6 @@ import SearchImage, {styles} from './SearchImage';
 
 const SearchContent = () => {
   const renderItem = ({item}) => {
-    // console.log(item);
     return item.id === 1 ? (
       <SearchImage item={item} />
     ) : (

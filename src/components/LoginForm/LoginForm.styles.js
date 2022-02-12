@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   img: {
     width: 55,
     height: 55,
+    resizeMode: 'contain',
   },
   input: {
     borderRadius: 5,
